@@ -2,10 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Peter Flanagan</title>
-<link href="assets/css/bootstrap.css" rel="stylesheet" />
-<link rel="stylesheet" href="style.css">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-theme.css" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/slippry.css">
+<link rel="stylesheet" href="assets/css/style.css">
 	
 </style>"
 </head>
@@ -43,12 +45,53 @@
 
 	</header>
 
+<!--______  BEGIN IMAGE SLIDER SECTION HERE _______-->
+
+	<section id="intro">
+		<ul id="slippry-slider">
+			<li>
+				<a href="#slide1"><img class="slider" src="assets/img/slide/lake_superior.jpg" alt="Welcome to my portfolio site!"></a>
+			</li>
+			<li>
+				<a href="#slide3"><img class="slider" src="assets/img/slide/Milky-Way-over-badlands.jpg"  alt="One finds limits by pushing them. – Herbert Simon"></a>
+			</li>
+			<li>
+				<a href="#slide2"><img class="slider" src="assets/img/slide/eclipse.jpg" alt="Every accomplishment starts with a decision to try."></a>
+			</li>
+		</ul>
+	</section>
+
 
 
 
 
 <script src="assets/js/jquery-2.1.4.min.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script src="assets/js/jquery.nicescroll.min.js"></script>
+<script src="assets/js/jquery.nav.js"></script>
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script src="assets/js/jquery.fancybox.pack.js"></script> 
+<script src="assets/js/jquery.fancybox-media.js"></script> 
 <script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/slippry.min.js"></script>
+<script>
+	$(document).ready(function(){
+	  $('#slippry-slider').slippry(
+		defaults = {
+			transition: 'horizontal',
+			useCSS: true,
+			speed: 1500,
+			pause: 6000,
+			initSingle: false,
+			auto: true,
+			preload: 'visible',
+			pager: false,		
+		} 
+	  
+	  )
+	});
+</script>
+
 
 </body>
 </html>
